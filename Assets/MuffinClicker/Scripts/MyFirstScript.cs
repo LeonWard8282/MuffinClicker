@@ -11,10 +11,25 @@ public class MyFirstScript : MonoBehaviour
   public void OnMuffinClicked()
     {
         m_counter = m_counter + 1;
-        _totalMuffinsText.text =  m_counter.ToString() + " Muffins" ;
+        UpDateTotalMuffins();
         Debug.Log( m_counter );
 
     }
 
+
+
+    private void UpDateTotalMuffins()
+    {
+
+        if(m_counter == 1)
+        {
+            _totalMuffinsText.text = m_counter.ToString() + " Muffin";
+        }
+        else
+        {
+            _totalMuffinsText.text = m_counter.ToString() + " Muffins";
+
+        }
+    }
 
 }
